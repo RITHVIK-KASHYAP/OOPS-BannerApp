@@ -1,5 +1,5 @@
 /*
-OOPSBAnner App UC1 - OOPS Banner Display
+OOPSBAnner App UC2 - OOPS Banner Display
 
 this clas demonstrates a simple java application that displays the object
 oriented programming system OOPS acronym to the console
