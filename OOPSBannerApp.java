@@ -8,7 +8,7 @@ oriented programming system OOPS acronym to the console
 @version 1.0
 
 */
-public class HelloWorld {
+public class OOPSBannerApp {
     public static void main(String[] args) {
         System.out.println("OOPS");
     }
