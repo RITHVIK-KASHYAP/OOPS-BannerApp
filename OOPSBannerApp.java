@@ -90,18 +90,30 @@ public class OOPSBannerApp
 		}
 		return charMaps[0].pattern;
     }
+    
     public static void printMessage(String message, CharacterPatternMap[] charMaps)
     {
-        for (int i=0; i < message.length(); i++) 
-        {
-			Character c = message.charAt(i);
-			String[] lines = getCharacterPattern(c, charMaps);
-			for (String line : lines) {
-				System.out.println(line);
-			}
-		}
+        if (message == null || message.length() == 0) return;
 
+        String[] first = getCharacterPattern(message.charAt(0), charMaps);
+        int height = first.length;
+
+        for (int row = 0; row < height; row++) {
+            StringBuilder line = new StringBuilder();
+            for (int i = 0; i < message.length(); i++) 
+            {
+                Character c = message.charAt(i);
+                String[] lines = getCharacterPattern(c, charMaps);
+                line.append(lines[row]);
+                if (i < message.length() - 1) 
+                {
+                    line.append("  "); 
+                }
+            }
+            System.out.println(line.toString());
+        }
     }
+
     public static void main(String[] args) 
     {
         CharacterPatternMap[] charMaps = createCharacterPatternMaps();
@@ -110,5 +122,3 @@ public class OOPSBannerApp
         
     }
 }
-
-           
